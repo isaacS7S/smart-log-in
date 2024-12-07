@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="icon" type="image/png" href="images.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center">
+        <div class="inner w-75 text-center py-5 px-5 my-5 d-flex flex-column align-items-center">
+            <h1 id="welcomeMessage" class="py-2 text-warning">Welcome!</h1>
+            <img src="images.jpeg" class="w-75" alt="">
+            <a href="index.html" class="btn btn-danger w-25 mt-3 form-control text-white" onclick="logout()">Log
+                Out</a>
+        </div>
+    </div>
+
+    <script>
+
+        var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+        if (currentUser) {
+            document.getElementById("welcomeMessage").innerText = "Welcome 3ZeZy , " + currentUser.name + "!";
+        } else {
+            window.location.href = "index.html";
+        }
+
+        function logout() {
+            localStorage.removeItem("currentUser");
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+
+</html>
+
+</html>

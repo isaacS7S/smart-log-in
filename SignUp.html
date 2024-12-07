@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="icon" type="image/png" href="images.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="home">
+        <div class="container d-flex justify-content-center">
+            <div class="inner w-75 text-center py-5 px-5 my-5 d-flex flex-column align-items-center">
+                <h1 class="py-2">Smart Login System</h1>
+                <input type="text" id="UserName" placeholder="Enter your name" class="form-control">
+                <div id="alertName" class="alert alert-danger d-none">Name must start with a capital letter, followed by
+                    3 to 9 lowercase letters, and may end with a number.</div>
+                <input type="email" id="UserEmail" placeholder="Enter your E-mail" class="form-control mt-3">
+                <div id="alertEmail" class="alert alert-danger d-none">Please enter a valid email address.</div>
+                <input type="password" id="UserPass" placeholder="Enter your password" class="mt-3 mb-4 form-control">
+                <div id="alertPass" class="alert alert-danger d-none">Password must be between 6 and 20 characters, and
+                    include at least one uppercase letter, one lowercase letter, and one number.</div>
+                <div class="btn btn-outline-info w-100 form-control text-white" onclick="GetValue()">Sign Up</div>
+                <div id="alertSignUp" class="alert alert-danger d-none">Email or Password already exists. Please try
+                    different ones.</div>
+                <p class="text-white fw-bold py-3">Don't have an account ? <a href="index.html">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="JS/bootstrap.min.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
